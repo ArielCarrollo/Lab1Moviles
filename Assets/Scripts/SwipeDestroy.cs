@@ -6,22 +6,21 @@ public class SwipeDestroy : MonoBehaviour
 {
     private Vector2 startTouchPosition;
     private bool isSwiping = false;
-    private float minSwipeDistance = 100f; // Distancia mínima para considerar un swipe válido
+    private float minSwipeDistance = 100f; 
 
     private TrailRenderer trailRenderer;
     private Camera mainCamera;
     [SerializeField] private SelectionManager selectionManager;
 
-    private float zDepth; // Profundidad del TrailRenderer en la cámara ortográfica
+    private float zDepth;
 
     private void Start()
     {
         trailRenderer = GetComponent<TrailRenderer>();
         mainCamera = Camera.main;
-        trailRenderer.enabled = false; // Desactivado al inicio
+        trailRenderer.enabled = false; 
 
-        // Establecemos la profundidad Z en la que queremos que se dibuje el Trail
-        zDepth = 0f; // Puedes cambiar esto si quieres que se dibuje en otra profundidad
+        zDepth = 0f; 
     }
 
     private void Update()
@@ -50,7 +49,7 @@ public class SwipeDestroy : MonoBehaviour
                 case TouchPhase.Moved:
                     if (isSwiping)
                     {
-                        transform.position = touchPosition; // Actualiza la posición del TrailRenderer
+                        transform.position = touchPosition;
                     }
                     break;
 
@@ -66,7 +65,7 @@ public class SwipeDestroy : MonoBehaviour
                         }
                     }
                     isSwiping = false;
-                    trailRenderer.enabled = false; // Desactiva el TrailRenderer
+                    trailRenderer.enabled = false;
                     break;
             }
         }

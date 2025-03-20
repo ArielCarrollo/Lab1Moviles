@@ -6,12 +6,12 @@ public class Dragger : MonoBehaviour
 {
     private bool isDragging = false;
     private Camera mainCamera;
-    private float zDepth; // La profundidad fija en la que se ubicarán los objetos
+    private float zDepth;
 
     private void Start()
     {
         mainCamera = Camera.main;
-        zDepth = transform.position.z; // Guardar la profundidad actual del objeto
+        zDepth = transform.position.z;
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Dragger : MonoBehaviour
             }
             else if (touch.phase == TouchPhase.Moved && isDragging)
             {
-                transform.position = new Vector3(touchPosition.x, touchPosition.y, zDepth); // Mover con la profundidad fija
+                transform.position = new Vector3(touchPosition.x, touchPosition.y, zDepth);
             }
             else if (touch.phase == TouchPhase.Ended)
             {
