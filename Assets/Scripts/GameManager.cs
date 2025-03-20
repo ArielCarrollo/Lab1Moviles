@@ -6,12 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject prefab;
     [SerializeField]private SelectionManager selectionManager;
-
-    private void Start()
-    {
-        selectionManager = FindObjectOfType<SelectionManager>();
-    }
-
     private void Update()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)

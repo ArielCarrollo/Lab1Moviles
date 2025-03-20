@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2746398176161526651}
   m_Layer: 0
   m_Name: "PrefabVAc\xEDo"
-  m_TagString: Untagged
+  m_TagString: ObjectSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

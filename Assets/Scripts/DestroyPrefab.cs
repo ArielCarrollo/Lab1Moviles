@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyPrefab : MonoBehaviour
 {
     private float lastTapTime = 0f;
-    private float doubleTapThreshold = 0.3f; // Tiempo máximo entre toques para considerarlo un doble tap
+    private float doubleTapThreshold = 0.3f;
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class DestroyPrefab : MonoBehaviour
                 {
                     if (Time.time - lastTapTime <= doubleTapThreshold)
                     {
-                        Destroy(gameObject); // Destruye el objeto si se detecta un doble tap
+                        Destroy(gameObject);
                     }
                     lastTapTime = Time.time;
                 }
