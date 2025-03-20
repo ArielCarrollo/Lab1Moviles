@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3973102930694768262}
   - component: {fileID: -1668632417678511244}
   - component: {fileID: -2746398176161526651}
+  - component: {fileID: 2263387441448350938}
   m_Layer: 0
   m_Name: "PrefabVAc\xEDo"
   m_TagString: ObjectSpawn
@@ -117,5 +118,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f931fc3d6f89a1d4ba0ee8d4e72c2604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2263387441448350938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186670996902716810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94422727d7fc8004d86f3ab8d1af2827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
