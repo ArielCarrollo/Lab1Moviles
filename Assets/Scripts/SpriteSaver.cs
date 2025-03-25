@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SpriteSaver : MonoBehaviour
 {
-    [SerializeField]private SelectionManager selectionManager;
+    [SerializeField]private SelectionSpriteSO selectionSprite;
 
     private void Start()
     {
@@ -15,6 +15,6 @@ public class SpriteSaver : MonoBehaviour
     public void SaveSprite()
     {
         Sprite sprite = GetComponent<Image>().sprite;
-        selectionManager.SetSprite(sprite);
+        selectionSprite.SetSprite(sprite);
     }
 }

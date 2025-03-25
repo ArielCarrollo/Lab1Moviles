@@ -5,22 +5,24 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject prefab;
-    [SerializeField]private SelectionManager selectionManager;
+    [SerializeField]private SelectionColorSO selectionColor;
+    [SerializeField] private SelectionSpriteSO selectionSprite;
     private void Update()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            if (selectionManager.IsReadyToSpawn)
+            if (selectionSprite.IsReadyToSpawn && selectionColor.IsReadyToSpawn)
             {
                 Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
                 touchPosition.z = 0f;
 
                 GameObject newObject = Instantiate(prefab, touchPosition, Quaternion.identity);
                 SpriteRenderer sr = newObject.GetComponent<SpriteRenderer>();
-                sr.sprite = selectionManager.SelectedSprite;
-                sr.color = selectionManager.SelectedColor;
+                sr.sprite = selectionSprite.SelectedSprite;
+                sr.color = selectionColor.SelectedColor;
 
-                selectionManager.ResetSelections();
+                selectionSprite.ResetSelections();
+                selectionColor.ResetSelections();
             }
         }
     }

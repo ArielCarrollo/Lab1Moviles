@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ColorSaver : MonoBehaviour
 {
-    [SerializeField]private SelectionManager selectionManager;
+    [SerializeField]private SelectionColorSO selectionColor;
 
     private void Start()
     {
@@ -15,6 +15,6 @@ public class ColorSaver : MonoBehaviour
     public void SaveColor()
     {
         Color color = GetComponent<Image>().color;
-        selectionManager.SetColor(color);
+        selectionColor.SetColor(color);
     }
 }

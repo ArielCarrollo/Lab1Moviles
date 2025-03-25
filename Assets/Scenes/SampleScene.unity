@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &289311104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &340710952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &595992217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &735447638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &816423252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ef06ea9a7be5428e4862c9c277e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!1 &1439280738
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,7 +2770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &1461054921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,9 +2781,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1461054925}
   - component: {fileID: 1461054924}
-  - component: {fileID: 1461054926}
   - component: {fileID: 1461054927}
   - component: {fileID: 1461054928}
+  - component: {fileID: 1461054929}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -2804,7 +2804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8186670996902716810, guid: cc707a31c7c6d364e8d0b72659898dcc, type: 3}
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!4 &1461054925
 Transform:
   m_ObjectHideFlags: 0
@@ -2820,18 +2821,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1461054926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461054921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31ee02be9140514428f7d612c5e90c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1461054927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2844,7 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd854c254367ab4cbac1d363917f28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionColor: {fileID: 11400000, guid: 0725818b17a7e0a48aea05b03012cdf6, type: 2}
 --- !u!96 &1461054928
 TrailRenderer:
   serializedVersion: 3
@@ -2958,6 +2947,36 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1461054929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461054921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: 0}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1542846585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,7 +3391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &1762686708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,7 +3912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &2066361384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,7 +4327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65d8bd4b744163f42b49dafd44d6ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionManager: {fileID: 1461054926}
+  selectionSprite: {fileID: 11400000, guid: 527486eac87c9864d872e07b1d643df9, type: 2}
 --- !u!1 &2125127862
 GameObject:
   m_ObjectHideFlags: 0

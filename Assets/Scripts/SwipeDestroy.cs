@@ -10,7 +10,7 @@ public class SwipeDestroy : MonoBehaviour
 
     private TrailRenderer trailRenderer;
     private Camera mainCamera;
-    [SerializeField] private SelectionManager selectionManager;
+    [SerializeField] private SelectionColorSO selectionColor;
 
     private float zDepth;
 
@@ -39,10 +39,10 @@ public class SwipeDestroy : MonoBehaviour
                     trailRenderer.Clear();
                     transform.position = touchPosition;
 
-                    if (selectionManager != null && selectionManager.SelectedColor != Color.white)
+                    if (selectionColor != null && selectionColor.SelectedColor != Color.white)
                     {
-                        trailRenderer.startColor = selectionManager.SelectedColor;
-                        trailRenderer.endColor = selectionManager.SelectedColor;
+                        trailRenderer.startColor = selectionColor.SelectedColor;
+                        trailRenderer.endColor = selectionColor.SelectedColor;
                     }
                     break;
 
