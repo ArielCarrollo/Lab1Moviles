@@ -6,9 +6,63 @@
             "id": "9e4c62f2-f5ce-4864-97bb-9a835de5bd7d",
             "actions": [
                 {
-                    "name": "SelectTap",
+                    "name": "SelectColor",
                     "type": "Button",
                     "id": "90e3db37-a63d-463c-b3f1-a26a35e7febf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwipeStart",
+                    "type": "Value",
+                    "id": "82596268-fc03-4d4f-a511-7aa2fae5e244",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SwipeMove",
+                    "type": "Value",
+                    "id": "3b9239e7-2528-4f4b-84a9-48f50be3d55c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SwipeEnd",
+                    "type": "Button",
+                    "id": "829135b5-bddd-4bdd-a4d6-eae190c3fca7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "OnTouchStart",
+                    "type": "Button",
+                    "id": "a489c06a-9975-44f4-a4a4-221e39760473",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OnTouchMove",
+                    "type": "Value",
+                    "id": "65608119-344f-452e-be9f-be3e65018c0d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "OnTouchENd",
+                    "type": "Button",
+                    "id": "b62f6be2-2980-43f2-aec9-293154c89ddd",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -23,7 +77,73 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SelectTap",
+                    "action": "SelectColor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "313b4d19-45b6-4525-bc54-1de04e43a9dd",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwipeStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "689b24bf-36e0-4724-aa20-bbec3de9132d",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwipeMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32d9bd3e-af24-4e57-8af7-c35db75a537d",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwipeEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f84ffc7f-bd85-4b23-84cf-d87e167b0462",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnTouchStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46868eb5-44ea-4e64-b024-246663e412ff",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnTouchMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68889c06-9dc7-4658-9a25-59b8883b7b30",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnTouchENd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

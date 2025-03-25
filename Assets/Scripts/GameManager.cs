@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject prefab;
-    [SerializeField]private SelectionColorSO selectionColor;
+    [SerializeField] private SelectionColorSO selectionColor;
     [SerializeField] private SelectionSpriteSO selectionSprite;
-    private void Update()
+
+    public void OnTap(InputAction.CallbackContext context)
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (context.performed)
         {
             if (selectionSprite.IsReadyToSpawn && selectionColor.IsReadyToSpawn)
             {
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                touchPosition.z = 0f;
+                Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, 0));
+                worldPosition.z = 0f;
 
-                GameObject newObject = Instantiate(prefab, touchPosition, Quaternion.identity);
+                GameObject newObject = Instantiate(prefab, worldPosition, Quaternion.identity);
                 SpriteRenderer sr = newObject.GetComponent<SpriteRenderer>();
                 sr.sprite = selectionSprite.SelectedSprite;
                 sr.color = selectionColor.SelectedColor;

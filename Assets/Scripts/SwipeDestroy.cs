@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class SwipeDestroy : MonoBehaviour
 {
     private Vector2 startTouchPosition;
     private bool isSwiping = false;
-    private float minSwipeDistance = 100f; 
+    private float minSwipeDistance = 100f;
 
     private TrailRenderer trailRenderer;
     private Camera mainCamera;
@@ -18,56 +18,56 @@ public class SwipeDestroy : MonoBehaviour
     {
         trailRenderer = GetComponent<TrailRenderer>();
         mainCamera = Camera.main;
-        trailRenderer.enabled = false; 
+        trailRenderer.enabled = false;
 
-        zDepth = 0f; 
+        zDepth = 0f;
     }
 
-    private void Update()
+    public void OnTouchStart(InputAction.CallbackContext context)
     {
-        if (Input.touchCount > 0)
+        if (context.started && Touchscreen.current != null)
         {
-            Touch touch = Input.GetTouch(0);
-            Vector3 touchPosition = mainCamera.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, -mainCamera.transform.position.z + zDepth));
+            startTouchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            isSwiping = true;
+            trailRenderer.enabled = true;
+            trailRenderer.Clear();
 
-            switch (touch.phase)
+            Vector3 touchPosition = mainCamera.ScreenToWorldPoint(new Vector3(startTouchPosition.x, startTouchPosition.y, -mainCamera.transform.position.z + zDepth));
+            touchPosition.z = 0f;
+            transform.position = touchPosition;
+
+            if (selectionColor != null && selectionColor.SelectedColor != Color.white)
             {
-                case TouchPhase.Began:
-                    startTouchPosition = touch.position;
-                    isSwiping = true;
-                    trailRenderer.enabled = true;
-                    trailRenderer.Clear();
-                    transform.position = touchPosition;
-
-                    if (selectionColor != null && selectionColor.SelectedColor != Color.white)
-                    {
-                        trailRenderer.startColor = selectionColor.SelectedColor;
-                        trailRenderer.endColor = selectionColor.SelectedColor;
-                    }
-                    break;
-
-                case TouchPhase.Moved:
-                    if (isSwiping)
-                    {
-                        transform.position = touchPosition;
-                    }
-                    break;
-
-                case TouchPhase.Ended:
-                    if (isSwiping)
-                    {
-                        Vector2 endTouchPosition = touch.position;
-                        Vector2 swipeDirection = endTouchPosition - startTouchPosition;
-
-                        if (swipeDirection.magnitude > minSwipeDistance)
-                        {
-                            EliminarTodosLosObjetos();
-                        }
-                    }
-                    isSwiping = false;
-                    trailRenderer.enabled = false;
-                    break;
+                trailRenderer.startColor = selectionColor.SelectedColor;
+                trailRenderer.endColor = selectionColor.SelectedColor;
             }
+        }
+    }
+
+    public void OnTouchMove(InputAction.CallbackContext context)
+    {
+        if (context.performed && isSwiping && Touchscreen.current != null)
+        {
+            Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, -mainCamera.transform.position.z + zDepth));
+            worldPosition.z = 0f;
+            transform.position = worldPosition;
+        }
+    }
+
+    public void OnTouchEnd(InputAction.CallbackContext context)
+    {
+        if (context.canceled && isSwiping && Touchscreen.current != null)
+        {
+            Vector2 endTouchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            Vector2 swipeDirection = endTouchPosition - startTouchPosition;
+
+            if (swipeDirection.magnitude > minSwipeDistance)
+            {
+                EliminarTodosLosObjetos();
+            }
+            isSwiping = false;
+            trailRenderer.enabled = false;
         }
     }
 
@@ -81,3 +81,4 @@ public class SwipeDestroy : MonoBehaviour
         }
     }
 }
+

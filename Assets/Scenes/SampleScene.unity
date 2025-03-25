@@ -2780,10 +2780,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461054925}
+  - component: {fileID: 1461054929}
   - component: {fileID: 1461054924}
   - component: {fileID: 1461054927}
   - component: {fileID: 1461054928}
-  - component: {fileID: 1461054929}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -2959,8 +2959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
-  m_NotificationBehavior: 0
+  m_Actions: {fileID: -944628639613478452, guid: e409d526ca8ce3546902b9bf42f9d63b,
+    type: 3}
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -2971,10 +2972,112 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1461054924}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnTap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 90e3db37-a63d-463c-b3f1-a26a35e7febf
+    m_ActionName: Game/SelectTap[/Device Simulator Touchscreen/primaryTouch/tap]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1461054927}
+        m_TargetAssemblyTypeName: SwipeDestroy, Assembly-CSharp
+        m_MethodName: OnTouchStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 82596268-fc03-4d4f-a511-7aa2fae5e244
+    m_ActionName: Game/Swipe[/Device Simulator Touchscreen/primaryTouch/phase,/Device
+      Simulator Touchscreen/primaryTouch/position]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1461054927}
+        m_TargetAssemblyTypeName: SwipeDestroy, Assembly-CSharp
+        m_MethodName: OnTouchMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3b9239e7-2528-4f4b-84a9-48f50be3d55c
+    m_ActionName: Game/SwipeMove
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1461054927}
+        m_TargetAssemblyTypeName: SwipeDestroy, Assembly-CSharp
+        m_MethodName: OnTouchEnd
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 829135b5-bddd-4bdd-a4d6-eae190c3fca7
+    m_ActionName: Game/SwipeEnd
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8186670996902716810, guid: cc707a31c7c6d364e8d0b72659898dcc,
+          type: 3}
+        m_TargetAssemblyTypeName: Dragger, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a489c06a-9975-44f4-a4a4-221e39760473
+    m_ActionName: Game/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 65608119-344f-452e-be9f-be3e65018c0d
+    m_ActionName: Game/OnTouchContact1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b62f6be2-2980-43f2-aec9-293154c89ddd
+    m_ActionName: Game/OnTouchENd
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1542846585
